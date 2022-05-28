@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da9bee89-ec82-496e-a164-bbc33eaca22c" name="Changes" comment="Primer commit,practica 1">
+    <list default="true" id="da9bee89-ec82-496e-a164-bbc33eaca22c" name="Changes" comment="Agregando puntos b,c,d">
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/.gradle/7.4/dependencies-accessors/gc.properties" afterDir="false" />
@@ -30,39 +30,20 @@
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/gradlew" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/settings.gradle" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/src/main/java/edu/pucmm/eitc/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/src/main/java/edu/pucmm/eitc/Rutas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hola_Mundo/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hola_Mundo/build/classes/java/main/org/example/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hola_Mundo/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/distributions/Practica1_ClienteHTTP-1.0-SNAPSHOT.tar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/distributions/Practica1_ClienteHTTP-1.0-SNAPSHOT.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/Practica1_ClienteHTTP-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/scripts/Practica1_ClienteHTTP" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/scripts/Practica1_ClienteHTTP.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+    </option>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -113,6 +94,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -206,7 +188,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653678631466</updated>
       <workItem from="1653678633627" duration="5533000" />
-      <workItem from="1653694709334" duration="2912000" />
+      <workItem from="1653694709334" duration="3218000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit,practica 1">
       <created>1653684191624</created>
@@ -215,7 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653684191624</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Agregando puntos b,c,d">
+      <created>1653698904547</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653698904547</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Agregando puntos b,c,d">
+      <created>1653699057461</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653699057461</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +230,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit,practica 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer commit,practica 1" />
+    <MESSAGE value="Agregando puntos b,c,d" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregando puntos b,c,d" />
   </component>
 </project>
