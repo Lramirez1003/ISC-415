@@ -16,7 +16,6 @@ public class Main {
         String url= scanner.nextLine();
 
         Document doc = Jsoup.connect(url).timeout(15000)
-                .followRedirects(true)
                 .get();
         //Contador de las lineas del documento
         long lineas= doc.html().lines().count();
@@ -39,7 +38,7 @@ public class Main {
         Elements gets = doc.select("form[method$=get]");
         System.out.println("La URL tiene: "+ gets.size() +" formularios con el metodo GET.");
 
-        System.out.println("Su URL es: "+ url +" .");
+
 
 
 
