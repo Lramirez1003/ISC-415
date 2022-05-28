@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da9bee89-ec82-496e-a164-bbc33eaca22c" name="Changes" comment="Agregando puntos b,c,d">
+    <list default="true" id="da9bee89-ec82-496e-a164-bbc33eaca22c" name="Changes" comment="...">
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/.gradle/7.4/dependencies-accessors/gc.properties" afterDir="false" />
@@ -34,6 +34,8 @@
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/src/main/java/edu/pucmm/eitc/Rutas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +190,8 @@
       <option name="presentableId" value="Default" />
       <updated>1653678631466</updated>
       <workItem from="1653678633627" duration="5533000" />
-      <workItem from="1653694709334" duration="3218000" />
+      <workItem from="1653694709334" duration="3336000" />
+      <workItem from="1653741819632" duration="364000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit,practica 1">
       <created>1653684191624</created>
@@ -211,7 +214,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653699057461</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Agregando puntos b,c,d">
+      <created>1653699106202</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653699106202</updated>
+    </task>
+    <task id="LOCAL-00005" summary="...">
+      <created>1653742178530</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653742178530</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +248,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit,practica 1" />
     <MESSAGE value="Agregando puntos b,c,d" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregando puntos b,c,d" />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
 </project>
