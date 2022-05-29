@@ -76,7 +76,7 @@ public class Main {
                 Response respuesta;
                 respuesta = Jsoup.connect(URL).method(Method.POST).data("asignatura","practica1").header("matricula","20180570").execute();
 
-                System.out.println("\nRespuesta del formulario "+ formulario.attr("method").toUpperCase()+" número "+c+": \n Status: " + respuesta.statusCode());
+                System.out.println("\nRespuesta del formulario "+ formulario.attr("method").toUpperCase()+" número "+c+": \n Status: " + respuesta.statusCode()+ "\n Content-Type: " + respuesta.contentType() +"\n Cookies: "+ respuesta.cookies());
                 System.out.println(" Headers: " + respuesta.headers());
 
             } catch (IOException error) {

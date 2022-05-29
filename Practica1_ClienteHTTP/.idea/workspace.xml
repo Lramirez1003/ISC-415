@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da9bee89-ec82-496e-a164-bbc33eaca22c" name="Changes" comment="Primer commit,practica 1">
+    <list default="true" id="da9bee89-ec82-496e-a164-bbc33eaca22c" name="Changes" comment="Agregando try/catch en main y puntos E y F para finalizar.">
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/.gradle/7.4/dependencies-accessors/gc.properties" afterDir="false" />
@@ -34,16 +34,8 @@
       <change afterPath="$PROJECT_DIR$/../AsignacionEnAula_1/src/main/java/edu/pucmm/eitc/Rutas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,6 +193,7 @@
       <workItem from="1653678633627" duration="5533000" />
       <workItem from="1653694709334" duration="3336000" />
       <workItem from="1653741819632" duration="2541000" />
+      <workItem from="1653862191362" duration="4184000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit,practica 1">
       <created>1653684191624</created>
@@ -244,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653742213790</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Agregando try/catch en main y puntos E y F para finalizar.">
+      <created>1653853669361</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653853669361</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +265,7 @@
     <MESSAGE value="Primer commit,practica 1" />
     <MESSAGE value="Agregando puntos b,c,d" />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="Agregando try/catch en main y puntos E y F para finalizar." />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregando try/catch en main y puntos E y F para finalizar." />
   </component>
 </project>
