@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class CarroCompra {
 
     long id;
-    ArrayList<Producto> listaProductos;
+    public ArrayList<Producto> listaProductos;
 
     public CarroCompra(long id) {
         this.id = id;

@@ -3,6 +3,9 @@ package edu.pucmm.eitc;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 import edu.pucmm.eitc.enrutamiento.*;
+import io.javalin.plugin.rendering.JavalinRenderer;
+import io.javalin.plugin.rendering.template.JavalinThymeleaf;
+import io.javalin.plugin.rendering.template.JavalinVelocity;
 
 public class Main {
 
@@ -17,8 +20,7 @@ public class Main {
 
         });
         app.start();
-
-        //new rutas(app).aplicarRutas();
+        new rutas(app).aplicarRutas();
 
 
 

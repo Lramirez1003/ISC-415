@@ -1,5 +1,7 @@
 package edu.pucmm.eitc.encapsulaciones;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -25,8 +27,10 @@ public class VentasProductos {
         this.id = id;
     }
 
-    public Date getFechaCompra() {
-        return fechaCompra;
+    public String getFechaCompra() {
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-YYYY");
+        String date = dateFormat.format(fechaCompra);
+        return date;
     }
 
     public void setFechaCompra(Date fechaCompra) {

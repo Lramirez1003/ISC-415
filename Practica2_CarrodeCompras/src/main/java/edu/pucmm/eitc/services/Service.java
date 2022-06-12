@@ -7,12 +7,12 @@ import java.util.List;
 
 public class Service {
 
-    static Service instance;
-    List<Usuario> listausuarios;
-    List<Producto> listaproducts;
-    List<VentasProductos> listventproduct;
-    int c;
-    long cart;
+    private static Service instance;
+    private List<Usuario> listausuarios;
+    private List<Producto> listaproducts;
+    private List<VentasProductos> listventproduct;
+    private int c;
+    private long cart;
 
     public Service() {
         listausuarios = new ArrayList<>();
