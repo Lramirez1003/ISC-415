@@ -67,6 +67,7 @@ public class Service {
 
     public boolean deleteProducto(int id){
         Producto temp = getProductoID(id);
+        temp.setId(id);
         return listaproducts.remove(temp);
     }
     public Producto getProductoID(int id) {

@@ -74,8 +74,8 @@ public class rutas extends BaseControlador {
         app.get("/ventas",ctx -> {
 
             if(ctx.cookie("usuario" ) == null || ctx.cookie("password") == null|| !ctx.cookie("usuario").equalsIgnoreCase("admin")|| !ctx.cookie("password").equalsIgnoreCase("admin")){
-             ctx.redirect("/auth/ventas");
-             return;
+                ctx.redirect("/auth/ventas");
+                    return;
             }
             CarroCompra carro = ctx.sessionAttribute("carrito");
             List<VentasProductos> ventas = service.getVentas();
@@ -90,7 +90,7 @@ public class rutas extends BaseControlador {
 
             if(ctx.cookie("usuario" ) == null || ctx.cookie("password") == null|| !ctx.cookie("usuario").equalsIgnoreCase("admin")|| !ctx.cookie("password").equalsIgnoreCase("admin")){
                 ctx.redirect("/auth/productos");
-                return;
+                 return;
             }
             CarroCompra carro = ctx.sessionAttribute("carrito");
             List<Producto> producto = service.getProductos();
@@ -122,8 +122,8 @@ public class rutas extends BaseControlador {
             Map<String,Object> modelo = new HashMap<>();
             modelo.put("producto",tmp);
             modelo.put("accion","/edit/"+ctx.pathParamAsClass("id",Integer.class).get());
-            CarroCompra carrito = ctx.sessionAttribute("carrito");
-            modelo.put("cantidad",carrito.getListaProductos().size());
+            CarroCompra carro = ctx.sessionAttribute("carrito");
+            modelo.put("cantidad",carro.getListaProductos().size());
             ctx.render("/publico/registrar.vm",modelo);
         });
 
@@ -156,7 +156,7 @@ public class rutas extends BaseControlador {
             ctx.cookie("usuario", user);
             ctx.cookie("password", pass);
 
-            ctx.redirect("/"+tmp);
+            ctx.redirect("/");
 
         });
 
@@ -182,9 +182,7 @@ public class rutas extends BaseControlador {
             ctx.redirect("/carrito");
         });
 
-        /*Procesa la compra
-         * crea un objeto venta
-         * Limpia el carrito del usuario*/
+        /*Procesa la compra*/
         app.post("/procesar",ctx -> {
             CarroCompra carro = ctx.sessionAttribute("carrito");
             if(carro.getListaProductos().size() < 1){
