@@ -35,19 +35,16 @@
                         </thead>
                         <tbody>
                         #foreach($producto in $venta.getListaProductos())
+                            <tr>
                             <td>
-                                <div >
-                                    <span>$producto.nombre</span>
-                                </div>
+                                <div ><span>$producto.nombre</span></div>
                             </td>
                             <td>$producto.getPrecio()</td>
                             <td class="quantity">
                                 <div class="input-group">$producto.getCantidad()</div>
                             </td>
-
-                            <td>
-                                $producto.total()
-                            </td>
+                            <td>$producto.total()</td>
+                            </tr>
                         #end
                         <tr>
                             <td>Total:</td>
