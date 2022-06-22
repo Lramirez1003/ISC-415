@@ -5,514 +5,263 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5019293c-471a-4f78-b2b5-5f9348d84b88" name="Changes" comment="Copiando practica 2 para su seguimiento en esta.">
-      <change afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/sha1-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/encapsulaciones/CarroCompra.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/encapsulaciones/Producto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/encapsulaciones/Usuario.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/encapsulaciones/VentasProductos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/enrutamiento/rutas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/services/Service.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/util/BaseControlador.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/distributions/Practica2_CarrodeCompras-1.0-SNAPSHOT.tar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/distributions/Practica2_CarrodeCompras-1.0-SNAPSHOT.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/Practica2_CarrodeCompras-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/carrito.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/css/bootstrap/_media.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/css/bootstrap/mixins/_box-shadow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/css/bootstrap/mixins/_reset-text.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/css/login-util.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/css/tablaventas.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/Read Me.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/demo-files/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/demo-files/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/fonts/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/fonts/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/fonts/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/fonts/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/selection.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/css/material-design-iconic-font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/css/material-design-iconic-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/UFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/header.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/images/hero_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/images/hero_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/images/icons/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/images/icons/map-marker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/js/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/js/jquery.sticky.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/js/tablaventas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/listaProd.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/login.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/productos.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/registrar.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_badge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_breadcrumb.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_button-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_carousel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_close.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_code.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_custom-forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_dropdown.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_images.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_input-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_jumbotron.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_media.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_modal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_nav.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_navbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_popover.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_print.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_progress.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_root.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_spinners.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_tables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_toasts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_tooltip.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_transitions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_type.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/bootstrap-grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/bootstrap-reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_background-variant.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_badge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_border-radius.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_box-shadow.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_breakpoints.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_caret.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_deprecate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_float.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_gradients.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_grid-framework.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_hover.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_image.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_lists.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_nav-divider.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_reset-text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_resize.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_size.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_table-row.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_text-emphasis.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_text-hide.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_text-truncate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_transition.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_visibility.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_align.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_background.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_borders.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_display.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_embed.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_flex.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_float.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_overflow.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_position.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_screenreaders.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_shadows.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_sizing.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_spacing.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_stretched-link.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_visibility.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/vendor/_rfs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/scss/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/animate/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/animsition/css/animsition.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/animsition/css/animsition.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/animsition/js/animsition.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/animsition/js/animsition.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/js/tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/countdowntime/countdowntime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/css-hamburgers/hamburgers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/css-hamburgers/hamburgers.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/daterangepicker/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/daterangepicker/daterangepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/daterangepicker/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/daterangepicker/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/jquery/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/perfect-scrollbar/perfect-scrollbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/select2/select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/select2/select2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/select2/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/vendor/select2/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/publico/ventas.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/scripts/Practica2_CarrodeCompras" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/scripts/Practica2_CarrodeCompras.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/encapsulaciones/CarroCompra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/encapsulaciones/Producto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/encapsulaciones/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/encapsulaciones/VentasProductos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/enrutamiento/rutas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/services/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/util/BaseControlador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/carrito.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/css/bootstrap/_media.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/css/bootstrap/mixins/_box-shadow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/css/bootstrap/mixins/_reset-text.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/css/login-util.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/css/tablaventas.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/JosefinSans/JosefinSans-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/JosefinSans/JosefinSans-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/JosefinSans/JosefinSans-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/JosefinSans/JosefinSans-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/JosefinSans/JosefinSans-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/JosefinSans/JosefinSans-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/JosefinSans/JosefinSans-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/JosefinSans/JosefinSans-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/JosefinSans/JosefinSans-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/JosefinSans/JosefinSans-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/JosefinSans/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/icomoon/Read Me.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/icomoon/demo-files/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/icomoon/demo-files/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/icomoon/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/icomoon/fonts/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/icomoon/fonts/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/icomoon/fonts/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/icomoon/fonts/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/icomoon/selection.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/icomoon/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/iconic/css/material-design-iconic-font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/iconic/css/material-design-iconic-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/source-sans-pro/SourceSansPro-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/ubuntu/UFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/ubuntu/Ubuntu-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/ubuntu/Ubuntu-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/ubuntu/Ubuntu-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/ubuntu/Ubuntu-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/ubuntu/Ubuntu-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/ubuntu/Ubuntu-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/ubuntu/Ubuntu-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/fonts/ubuntu/Ubuntu-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/header.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/images/hero_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/images/hero_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/images/icons/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/images/icons/map-marker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/js/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/js/jquery.sticky.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/js/tablaventas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/listaProd.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/login.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/productos.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/registrar.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_badge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_breadcrumb.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_button-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_carousel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_close.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_code.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_custom-forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_dropdown.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_images.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_input-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_jumbotron.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_media.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_modal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_nav.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_navbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_popover.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_print.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_progress.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_root.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_spinners.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_tables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_toasts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_tooltip.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_transitions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_type.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/bootstrap-grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/bootstrap-reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_align.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_background.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_borders.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_display.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_embed.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_flex.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_float.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_overflow.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_position.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_screenreaders.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_shadows.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_sizing.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_spacing.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_stretched-link.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/utilities/_visibility.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/bootstrap/vendor/_rfs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/scss/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/animate/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/animsition/css/animsition.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/animsition/css/animsition.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/animsition/js/animsition.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/animsition/js/animsition.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/bootstrap/js/tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/countdowntime/countdowntime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/css-hamburgers/hamburgers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/css-hamburgers/hamburgers.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/daterangepicker/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/daterangepicker/daterangepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/daterangepicker/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/daterangepicker/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/jquery/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/perfect-scrollbar/perfect-scrollbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/select2/select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/select2/select2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/select2/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/vendor/select2/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/publico/ventas.vm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/src/main/java/edu/pucmm/eitc/enrutamiento/rutas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/src/main/java/edu/pucmm/eitc/enrutamiento/rutas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/carrito.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/css/bootstrap/_media.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/css/bootstrap/mixins/_box-shadow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/css/bootstrap/mixins/_reset-text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/css/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/css/login-util.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/css/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/css/tablaventas.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/JosefinSans-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/JosefinSans/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/Read Me.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/demo-files/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/demo-files/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/fonts/icomoon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/fonts/icomoon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/fonts/icomoon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/fonts/icomoon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/selection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/icomoon/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/source-sans-pro/SourceSansPro-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/UFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/fonts/ubuntu/Ubuntu-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/header.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/images/hero_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/images/hero_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/images/icons/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/images/icons/map-marker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/js/header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/js/jquery-3.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/js/jquery.sticky.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/js/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/js/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/js/tablaventas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/listaProd.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/login.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/productos.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/registrar.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_breadcrumb.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_button-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_close.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_code.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_jumbotron.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_media.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_print.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_root.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_spinners.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_toasts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_transitions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/bootstrap-grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/bootstrap-reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/bootstrap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_background-variant.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_border-radius.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_box-shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_caret.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_deprecate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_gradients.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_grid-framework.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_hover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_image.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_lists.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_nav-divider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_reset-text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_resize.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_size.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_table-row.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_text-emphasis.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_text-hide.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_text-truncate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/mixins/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_align.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_background.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_borders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_display.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_embed.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_flex.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_overflow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_position.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_screenreaders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_shadows.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_sizing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_spacing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_stretched-link.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/utilities/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/bootstrap/vendor/_rfs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/scss/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/animate/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/animsition/css/animsition.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/animsition/css/animsition.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/animsition/js/animsition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/animsition/js/animsition.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/js/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/bootstrap/js/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/countdowntime/countdowntime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/css-hamburgers/hamburgers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/css-hamburgers/hamburgers.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/daterangepicker/daterangepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/daterangepicker/daterangepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/daterangepicker/moment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/daterangepicker/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/jquery/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/perfect-scrollbar/perfect-scrollbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/perfect-scrollbar/perfect-scrollbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/select2/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/select2/select2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/select2/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/vendor/select2/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/publico/ventas.vm" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -595,10 +344,10 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/luis_/OneDrive - Pontificia Universidad Católica Madre y Maestra/Clase/12th/ISC 415 documentos/carro_compra&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/luis_/OneDrive - Pontificia Universidad Católica Madre y Maestra/Clase/12th/ISC 415 Programacion Web/Practica3y4_JDBC-ORM&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.Practica3y4_JDBC-ORM [build]">
     <configuration name="Practica2_CarrodeCompras [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -620,8 +369,30 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Practica3y4_JDBC-ORM [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Practica3y4_JDBC-ORM [build]" />
         <item itemvalue="Gradle.Practica2_CarrodeCompras [run]" />
       </list>
     </recent_temporary>
@@ -641,6 +412,7 @@
       <workItem from="1655042112536" duration="21015000" />
       <workItem from="1655307454854" duration="4686000" />
       <workItem from="1655854783911" duration="289000" />
+      <workItem from="1655910554080" duration="246000" />
     </task>
     <task id="LOCAL-00001" summary="Parche">
       <created>1654867903932</created>
@@ -733,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655312600544</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Copiando practica 2 para su seguimiento en esta.">
+      <created>1655855747052</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1655855747052</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
