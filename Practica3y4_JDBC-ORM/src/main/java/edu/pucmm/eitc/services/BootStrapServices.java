@@ -64,7 +64,7 @@ public class BootStrapServices {
                 "(\n" +
                 "  ID IDENTITY PRIMARY KEY NOT NULL,\n" +
                 "  Nombre VARCHAR(100) NOT NULL,\n" +
-                "  EstadoVARCHAR(5) NOT NULL,\n" +
+                "  Estado VARCHAR(15) NOT NULL,\n" +
                 "  Precio VARCHAR(25) NOT NULL,\n" +
                   ");";
         ExecuteQuery(sql);
@@ -119,11 +119,14 @@ public class BootStrapServices {
     }
 
     public static void TablaVentasProductos() throws  SQLException{
-        String sql = "CREATE TABLE IF NOT EXISTS Ventas\n" +
+        String sql = "CREATE TABLE IF NOT EXISTS VentaProductos\n" +
                 "(\n" +
-                "  ID IDENTITY PRIMARY KEY NOT NULL,\n" +
-                "  Fecha DATE NOT NULL,\n" +
-                "  Nombre VARCHAR(25) NOT NULL,\n" +
+                " VentaID INTEGER NOT NULL,\n"+
+                " ProductoID INTEGER NOT NULL,\n"+
+                " Cantidad INTEGER NOT NULL, \n" +
+                "FOREIGN KEY (VentaID) REFERENCES Ventas(ID), \n" +
+                "FOREIGN KEY (ProductoID) REFERENCES Producto(ID), \n"+
+                "CONSTRAINT PK_ID PRIMARY KEY (VentaID,ProductoID) \n" +
                 ");";
         ExecuteQuery(sql);
 

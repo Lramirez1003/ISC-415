@@ -12,11 +12,12 @@ public class VentasProductos {
     String nombreCliente;
     ArrayList<Producto>listaProductos;
 
-    public VentasProductos(long id, String nombreCliente, ArrayList<Producto> productos) {
-        this.id = id;
-        this.fechaCompra = new Date();
+    public VentasProductos(String nombreCliente, ArrayList<Producto> productos) {
         this.nombreCliente = nombreCliente;
         this.listaProductos = productos;
+    }
+    public VentasProductos(){
+
     }
 
     public long getId() {

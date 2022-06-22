@@ -11,6 +11,11 @@ public class Usuario {
         this.password = password;
     }
 
+    public Usuario(String usuario, String mist) {
+        this.usuario ="";
+        password="";
+    }
+
     public String getUsuario() {
         return usuario;
     }

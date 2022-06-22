@@ -1,9 +1,14 @@
 package edu.pucmm.eitc.services;
 
 import edu.pucmm.eitc.encapsulaciones.*;
+import org.eclipse.jetty.websocket.common.scopes.DelegatedContainerScope;
+import org.jetbrains.annotations.NotNull;
 
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Service {
 
@@ -15,12 +20,15 @@ public class Service {
     private long cart;
 
     public Service() {
-        listausuarios = new ArrayList<>();
-        listaproducts = new ArrayList<>();
-        listventproduct = new ArrayList<>();
-        c= 0;
-        cart = 0;
-        listausuarios.add(new Usuario("admin","admin","admin"));
+        BootStrapServices.startDb();
+
+        DataBaseServices.getInstancia().testConexion();
+        try {
+            BootStrapServices.Tablas();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     public static Service getInstance(){
@@ -30,16 +38,92 @@ public class Service {
         return instance;
     }
 
-    public List<Usuario> getUsuarios() {
-        return listausuarios;
-    }
-
     public List<Producto> getProductos() {
+        List<Producto> listaproducts = new ArrayList<Producto>();
+        Connection con = null;
+        try {
+            String sql ="SELECT * FROM Producto WHERE Estado = 'Disponible'";
+            con = DataBaseServices.getInstancia().getConexion();
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs= ps.executeQuery();
+
+            while(rs.next()){
+                Producto producto = new Producto();
+                producto.setId(rs.getInt("id"));
+                producto.setNombre(rs.getString("nombre"));
+                producto.setPrecio(rs.getInt("precio"));
+                listaproducts.add(producto);
+            }
+        } catch (SQLException e) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
         return listaproducts;
     }
 
     public List<VentasProductos> getVentas() {
+        List<VentasProductos> listventproduct = new ArrayList<VentasProductos>();
+        Connection con = null;
+        try {
+            String sql ="SELECT * FROM Ventas";
+            con = DataBaseServices.getInstancia().getConexion();
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs= ps.executeQuery();
+
+            while(rs.next()){
+                VentasProductos ventas = new VentasProductos();
+                ventas.setId(rs.getInt("id"));
+                ventas.setNombreCliente(rs.getString("nombre"));
+                ventas.setFechaCompra(rs.getDate("fecha"));
+                ventas.setListaProductos(getProductosVenta(ventas.getId()));
+                listventproduct.add(ventas);
+            }
+        } catch (SQLException e) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
         return listventproduct;
+    }
+
+    private ArrayList<Producto> getProductosVenta(long id) {
+        List<Producto> productos= new ArrayList<Producto>();
+        Connection con = null;
+        try{
+            String query = "SELECT Producto.Nombre AS Nombre, Producto.Precio AS Precio,VentaProductos.Cantidad AS Cantidad\n" +
+                    "FROM VentaProductos INNER JOIN Producto ON Producto.ID = VentaProductos.ProductoID;";
+            con = DataBaseServices.getInstancia().getConexion();
+            PreparedStatement ps = con.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()){
+                Producto producto = new Producto();
+                producto.setNombre(rs.getString("nombre"));
+                producto.setPrecio(rs.getInt("precio"));
+                producto.setCantidad(rs.getInt("cantidad"));
+                productos.add(producto);
+            }
+        }catch (SQLException e){
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+            try {
+                con.close();
+            }catch (SQLException e){
+                Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+        return (ArrayList<Producto>) productos;
     }
 
     public Usuario authuser(String usuario,String nombre, String password){
@@ -48,8 +132,28 @@ public class Service {
     }
 
     public Producto registerProducto(Producto producto){
-        producto.setId(c++);
-        listaproducts.add(producto);
+        int row;
+        Connection con= null;
+        try {
+            String sql = "INSERT INTO Producto(Nombre,Precio)" +
+                    "values(?,?)";
+            con = DataBaseServices.getInstancia().getConexion();
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1,producto.getNombre());
+            ps.setInt(2,producto.getPrecio());
+            row = ps.executeUpdate();
+
+        } catch (SQLException e) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+        }finally {
+            try {
+                con.close();
+            }catch (SQLException e){
+                Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+
+
         return producto;
     }
 
@@ -57,25 +161,186 @@ public class Service {
         return cart++;
     }
     public Producto actualizarProducto(Producto producto){
-        Producto tmp = getProductoID(producto.getId());
-        if(tmp == null){
-            throw new RuntimeException("El usuario no existe: "+producto.getId());
+        boolean conf=false;
+        int row;
+        Connection con= null;
+        try {
+            String sql = "UPDATE Producto SET Nombre=?, Precio=? where ID= ?";
+            con = DataBaseServices.getInstancia().getConexion();
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setString(1,producto.getNombre());
+            ps.setInt(2,producto.getPrecio());
+            ps.setInt(3,producto.getId());
+            row = ps.executeUpdate();
+            conf =row>0;
+
+        } catch (SQLException e) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+        }finally {
+            try {
+                con.close();
+            }catch (SQLException e){
+                Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+            }
         }
-        tmp.act_prod(producto);
-        return tmp;
+
+        return producto;
     }
 
     public boolean deleteProducto(int id){
-        Producto temp = getProductoID(id);
-        temp.setId(id);
-        return listaproducts.remove(temp);
-    }
-    public Producto getProductoID(int id) {
-        return listaproducts.stream().filter(e -> e.getId() == id).findFirst().orElse(null);
+        boolean conf=false;
+        int row;
+        Connection con= null;
+        try {
+            String sql = "UPDATE Producto SET Estado = 'Eliminado' where ID= ?";
+            con = DataBaseServices.getInstancia().getConexion();
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1,id);
+            row = ps.executeUpdate();
+            conf =row>0;
+
+        } catch (SQLException e) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+        }finally {
+            try {
+                con.close();
+            }catch (SQLException e){
+                Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+
+        return conf;
     }
 
-    public void addVentas(VentasProductos venta) {
-        listventproduct.add(venta);
+    public Producto getProductoID(int id) {
+        Producto temp=null;
+        Connection con= null;
+        try {
+            String sql = "SELECT * FROM Producto where ID= ?";
+            con = DataBaseServices.getInstancia().getConexion();
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()){
+                temp = new Producto();
+                temp.setId(id);
+                temp.setNombre(rs.getString("Nombre"));
+                temp.setPrecio(rs.getInt("Precio"));
+
+            }
+
+        } catch (SQLException e) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+        }finally {
+            try {
+                con.close();
+            }catch (SQLException e){
+                Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+
+        return temp;
     }
+
+    public boolean addVentas(VentasProductos venta) {
+        boolean conf=false;
+        int row;
+        Connection con= null;
+        try {
+            String sql = "INSERT INTO Ventas(Fecha,Nombre)" +
+                    "values(CURRENT_DATE,?)";
+            con = DataBaseServices.getInstancia().getConexion();
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1,venta.getNombreCliente());
+            row = ps.executeUpdate();
+            addVentasProducto(row,venta.getListaProductos());
+            conf =row>0;
+
+        } catch (SQLException e) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+        }finally {
+            try {
+                con.close();
+            }catch (SQLException e){
+                Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+
+        return conf;
+    }
+
+    private boolean addVentasProducto(int row, ArrayList<Producto> listaProductos) {
+        boolean conf=false;
+        Connection con= null;
+        for (Producto producto:listaProductos){
+            try {
+                String sql="INSERT INTO VentaProductos(VentaID,ProductoID,Cantidad)" +
+                        "values(?,?,?,?)";
+                con = DataBaseServices.getInstancia().getConexion();
+                PreparedStatement ps = con.prepareStatement(sql);
+                ps.setInt(1,row);
+                ps.setInt(2,producto.getId());
+                ps.setInt(3,producto.getCantidad());
+
+                int exec = ps.executeUpdate();
+                conf = exec > 0;
+
+            } catch (SQLException e) {
+                Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+            }finally {
+                try {
+                    con.close();
+                }catch (SQLException e){
+                    Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+                }
+            }
+
+        }
+        return conf;
+    }
+    private void registerUsuario(Usuario user) throws SQLException {
+        String sql = "IF NOT EXISTS(select * from usuario where usuario='admin' and password ='admin')" +
+                "BEGIN" +
+                "INSERT INTO Usuario (Usuario,Password,Tipo) values ('"+user.getUsuario()+"','"+user.getPassword()+"','CLI')" +
+                "END";
+        BootStrapServices.ExecuteQuery(sql);
+    }
+
+    public String authUser(Usuario user){
+        boolean conf= false;
+        int res;
+        String tipo;
+        Connection con = null;
+        try {
+            String sql = "SELECT COUNT(*) AS Cantidad FROM Usuario WHERE User = '"+ user.getUsuario()+"'and Password = '" + user.getPassword()+"'";
+            con = DataBaseServices.getInstancia().getConexion();
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            res = rs.getInt("cantidad");
+            if (res > 0) {
+                ps = con.prepareStatement("SELECT Tipo FROM Usuario WHERE User = '" + user.getUsuario() + "'and Password = '" + user.getPassword() + "'");
+                ResultSet rs1 = ps.executeQuery();
+                rs1.next();
+                tipo = rs1.getString("tipo");
+                return tipo;
+            }else{
+                    registerUsuario(user);
+                }
+        }  catch (SQLException e) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+        }finally {
+            try {
+                con.close();
+            }catch (SQLException e){
+                Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+
+        return "";
+    }
+
+
 
 }

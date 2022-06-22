@@ -13,6 +13,12 @@ public class Producto {
         this.precio = precio;
     }
 
+    public Producto() {
+        id= 0;
+        nombre="";
+        precio=0;
+    }
+
     public int getId() {
         return id;
     }

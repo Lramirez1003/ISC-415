@@ -21,6 +21,8 @@ dependencies {
     implementation 'org.thymeleaf:thymeleaf:3.0.15.RELEASE'
     implementation 'org.apache.velocity:velocity-engine-core:2.3'
     implementation 'com.h2database:h2:2.1.214'
+    implementation 'org.jasypt:jasypt:1.9.3'
+
 
 
 

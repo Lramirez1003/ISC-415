@@ -7,6 +7,8 @@ import io.javalin.Javalin;
 import edu.pucmm.eitc.encapsulaciones.*;
 import io.javalin.plugin.rendering.JavalinRenderer;
 import io.javalin.plugin.rendering.template.JavalinVelocity;
+import org.jasypt.util.password.StrongPasswordEncryptor;
+import org.jasypt.util.text.AES256TextEncryptor;
 
 import java.util.HashMap;
 import java.util.List;
@@ -77,7 +79,17 @@ public class rutas extends BaseControlador {
                     !ctx.cookie("usuario").equalsIgnoreCase("admin")|| !ctx.cookie("password").equalsIgnoreCase("admin")){
                 ctx.redirect("/auth/ventas");
                     return;
+            } else{
+                AES256TextEncryptor Encrypt = new AES256TextEncryptor() ;
+                Encrypt.setPassword("myEncryptedPassword");
+                String password= Encrypt.decrypt(ctx.cookie("pass"));
+                Usuario temp= new Usuario(ctx.cookie("usuario"),password);
+                if (!service.authUser(temp).equalsIgnoreCase("admin")) {
+                    ctx.redirect("/auth/ventas");
+                    return;
+                }
             }
+
             CarroCompra carro = ctx.sessionAttribute("carrito");
             List<VentasProductos> ventas = service.getVentas();
             Map<String,Object> modelo = new HashMap<>();
@@ -93,6 +105,15 @@ public class rutas extends BaseControlador {
                     !ctx.cookie("usuario").equalsIgnoreCase("admin")|| !ctx.cookie("password").equalsIgnoreCase("admin")){
                 ctx.redirect("/auth/productos");
                  return;
+            }else{
+                AES256TextEncryptor Encrypt = new AES256TextEncryptor() ;
+                Encrypt.setPassword("myEncryptedPassword");
+                String password= Encrypt.decrypt(ctx.cookie("password"));
+                Usuario temp= new Usuario(ctx.cookie("usuario"),password);
+                if (!service.authUser(temp).equalsIgnoreCase("admin")) {
+                    ctx.redirect("/auth/productos");
+                    return;
+                }
             }
             CarroCompra carro = ctx.sessionAttribute("carrito");
             List<Producto> producto = service.getProductos();
@@ -135,7 +156,7 @@ public class rutas extends BaseControlador {
 
             Producto tmp = new Producto(nombre,precio);
             tmp.setId(ctx.pathParamAsClass("id",Integer.class).get());
-            service.registerProducto(tmp);
+            service.actualizarProducto(tmp);
             ctx.redirect("/productos");
 
         });
@@ -151,9 +172,20 @@ public class rutas extends BaseControlador {
             String user = ctx.formParam("usuario");
             String pass = ctx.formParam("password");
             String tmp = ctx.formParam("direc");
+            String rec = ctx.formParam("recordar");
 
             if (user == null || pass == null){
                 ctx.redirect("/auth/"+tmp);
+            }
+            Usuario sudo = new Usuario(user,pass);
+            service.authUser(sudo);
+            AES256TextEncryptor Encrypt = new AES256TextEncryptor() ;
+            Encrypt.setPassword("myEncryptedPassword");
+            pass= Encrypt.decrypt(ctx.cookie(pass));
+
+            if (rec !=null) {
+                ctx.cookie("usuario", user,(3600*24*7));
+                ctx.cookie("password", pass,(3600*24*7));
             }
             ctx.cookie("usuario", user);
             ctx.cookie("password", pass);
@@ -163,7 +195,7 @@ public class rutas extends BaseControlador {
         });
 
         /*Carga el carrito pasando la lista de productos que se tiene dentro del carro*/
-        app.get("/carrito", ctx -> {
+        app.get("/Carro", ctx -> {
             CarroCompra carro = ctx.sessionAttribute("carrito");
             if(carro == null){
                 carro = new CarroCompra(service.getCart());
@@ -181,17 +213,17 @@ public class rutas extends BaseControlador {
             carro.deleteProductID(id);
 
             ctx.sessionAttribute("carrito",carro);
-            ctx.redirect("/carrito");
+            ctx.redirect("/Carro");
         });
 
         /*Procesa la compra*/
         app.post("/procesar",ctx -> {
             CarroCompra carro = ctx.sessionAttribute("carrito");
             if(carro.getListaProductos().size() < 1){
-                ctx.redirect("/carrito");
+                ctx.redirect("/Carro");
             }
             String nombre = ctx.formParam("nombre");
-            VentasProductos venta = new VentasProductos(service.getVentas().size()+1,nombre,carro.listaProductos);
+            VentasProductos venta = new VentasProductos(nombre,carro.listaProductos);
             service.addVentas(venta);
             carro.deleteProductos();
             ctx.sessionAttribute("carrito",carro);
@@ -210,6 +242,14 @@ public class rutas extends BaseControlador {
             CarroCompra carro = ctx.sessionAttribute("carrito");
             carro.deleteProductos();
             ctx.redirect("/comprar");
+        });
+
+        app.get("/logout",ctx -> {
+            if (ctx.cookie("usuario")!=null && ctx.cookie("password")!=null){
+                ctx.removeCookie("usuario");
+                ctx.removeCookie("password");
+            }
+            ctx.redirect("/");
         });
 
 
