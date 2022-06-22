@@ -201,7 +201,7 @@ fi
 
 set -- \
         -classpath "$CLASSPATH" \
-         \
+        edu.pucmm.eitc.Main \
         "$@"
 
 # Use "xargs" to parse quoted args.

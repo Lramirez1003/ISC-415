@@ -71,7 +71,7 @@ set CLASSPATH=%APP_HOME%\lib\Practica2_CarrodeCompras-1.0-SNAPSHOT.jar;%APP_HOME
 
 
 @rem Execute Practica2_CarrodeCompras
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %PRACTICA2_CARRODE_COMPRAS_OPTS%  -classpath "%CLASSPATH%"  %*
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %PRACTICA2_CARRODE_COMPRAS_OPTS%  -classpath "%CLASSPATH%" edu.pucmm.eitc.Main %*
 
 :end
 @rem End local scope for the variables with windows NT shell
