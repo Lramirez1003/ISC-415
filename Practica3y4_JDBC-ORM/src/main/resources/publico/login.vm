@@ -15,7 +15,7 @@
 			<h1 class="mt-4 h3 mb-3 font-weight-normal">Log-In</h1>
 		</div>
 		<div class="card-body">
-			<form method="post" action="/auth/$direc">
+			<form method="post" action="/auth/$param">
 
 				<div class="form-group mb-3">
 					<input type="text" id="usuario" name="usuario" class="form-control" required autofocus placeholder="Usuario">
@@ -23,9 +23,13 @@
 				<div class="form-group">
 					<input type="password" id="password" name="password" class="form-control" placeholder="Contraseña">
 				</div>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember" >
+					<label class="form-check-label" for="exampleCheck1">Remember me</label>
+				</div>
 				<div class="mt-3">
 					<button  type="submit" class="btn btn-lg btn-primary btn-block mr-3" >Ingresar</button>
-					<a  class="btn btn-lg btn-secondary btn-block" href="/comprar">Cancelar</a>
+					<a  class="btn btn-lg btn-secondary btn-block" href="/comprar">Regresar</a>
 				</div>
 			</form>
 		</div>

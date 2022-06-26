@@ -28,9 +28,9 @@
             <li class="nav-item"><a href="/ventas" class="nav-link">Ventas Realizadas</a></li>
             <li class="nav-item"><a href="/productos" class="nav-link">Administrar productos</a></li>
             #if($cantidad == $null)
-              <li class="nav-item"><a href="/carrito" class="nav-link">Carrito(0)</a></li>
+              <li class="nav-item"><a href="/Carro" class="nav-link">Carrito(0)</a></li>
             #else
-              <li class="nav-item"><a href="/carrito" class="nav-link">Carrito($cantidad)</a></li>
+              <li class="nav-item"><a href="/Carro" class="nav-link">Carrito($cantidad)</a></li>
             #end
 
           </ul>
