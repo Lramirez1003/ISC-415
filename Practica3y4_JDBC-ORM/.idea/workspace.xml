@@ -4,23 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5019293c-471a-4f78-b2b5-5f9348d84b88" name="Changes" comment="Agregando dependencia de H2. Creando servicios para la conexion a la base de datos.">
+    <list default="true" id="5019293c-471a-4f78-b2b5-5f9348d84b88" name="Changes" comment="Arreglo sobre base de datos">
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/encapsulaciones/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/encapsulaciones/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/encapsulaciones/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/encapsulaciones/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/enrutamiento/rutas.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/enrutamiento/rutas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/services/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/edu/pucmm/eitc/services/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/Practica2_CarrodeCompras-1.0-SNAPSHOT.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/Practica2_CarrodeCompras-1.0-SNAPSHOT.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/Practica2_CarrodeCompras-1.0-SNAPSHOT.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/Practica2_CarrodeCompras-1.0-SNAPSHOT.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/Practica2_CarrodeCompras-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Practica2_CarrodeCompras-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/encapsulaciones/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/encapsulaciones/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/encapsulaciones/VentasProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/encapsulaciones/VentasProductos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/enrutamiento/rutas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/enrutamiento/rutas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/services/BootStrapServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/services/BootStrapServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/services/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/publico/header.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/publico/header.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/publico/login.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/publico/login.vm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,17 +105,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/luis_/OneDrive - Pontificia Universidad Católica Madre y Maestra/Clase/12th/ISC 415 documentos/carro_compra_practica3"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/luis_/OneDrive - Pontificia Universidad Católica Madre y Maestra/Clase/12th/ISC 415 documentos/carro_compra_practica3&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Gradle.Practica2_CarrodeCompras [run]">
     <configuration name="Practica2_CarrodeCompras [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -173,7 +183,11 @@
       <workItem from="1655854783911" duration="289000" />
       <workItem from="1655910554080" duration="246000" />
       <workItem from="1655910919701" duration="418000" />
-      <workItem from="1655913918937" duration="10099000" />
+      <workItem from="1655913918937" duration="10764000" />
+      <workItem from="1655986112818" duration="7862000" />
+      <workItem from="1656021405160" duration="2242000" />
+      <workItem from="1656066641138" duration="2607000" />
+      <workItem from="1656252611423" duration="8880000" />
     </task>
     <task id="LOCAL-00001" summary="Parche">
       <created>1654867903932</created>
@@ -294,7 +308,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655918261348</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Cambiando rutas locales a rutas relacionadas con la base de datos">
+      <created>1655926312873</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1655926312873</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Arreglo sobre base de datos">
+      <created>1656265205356</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1656265205357</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +349,8 @@
     <MESSAGE value="Arreglos minimos" />
     <MESSAGE value="Copiando practica 2 para su seguimiento en esta." />
     <MESSAGE value="Agregando dependencia de H2. Creando servicios para la conexion a la base de datos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregando dependencia de H2. Creando servicios para la conexion a la base de datos." />
+    <MESSAGE value="Cambiando rutas locales a rutas relacionadas con la base de datos" />
+    <MESSAGE value="Arreglo sobre base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglo sobre base de datos" />
   </component>
 </project>

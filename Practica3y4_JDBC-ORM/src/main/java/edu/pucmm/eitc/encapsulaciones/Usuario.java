@@ -1,20 +1,21 @@
 package edu.pucmm.eitc.encapsulaciones;
 
+import java.security.PublicKey;
+
 public class Usuario {
     String usuario;
-    String nombre;
     String password;
 
-    public Usuario(String usuario,String nombre,String password){
+    public Usuario(String usuario,String password){
         this.usuario = usuario;
-        this.nombre = nombre;
         this.password = password;
     }
 
-    public Usuario(String usuario, String mist) {
-        this.usuario ="";
+    public Usuario() {
+        usuario ="";
         password="";
     }
+
 
     public String getUsuario() {
         return usuario;
@@ -24,13 +25,6 @@ public class Usuario {
         this.usuario = usuario;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public String getPassword() {
         return password;

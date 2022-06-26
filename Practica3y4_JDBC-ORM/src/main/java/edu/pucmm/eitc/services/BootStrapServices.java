@@ -50,40 +50,32 @@ public class BootStrapServices {
         TablaVentasProductos();
         Admin();
     }
-    public static void  ExecuteQuery(String query) throws SQLException{
+    public static void  ExecuteQuery(String sql) throws SQLException{
         Connection con = DataBaseServices.getInstancia().getConexion();
         Statement statement = con.createStatement();
-        statement.execute(query);
+        statement.execute(sql);
         statement.close();
         con.close();
     }
 
 
     public static void TablaProducto() throws  SQLException{
-        String sql = "CREATE TABLE IF NOT EXISTS Producto\n" +
-                "(\n" +
-                "  ID IDENTITY PRIMARY KEY NOT NULL,\n" +
-                "  Nombre VARCHAR(100) NOT NULL,\n" +
-                "  Estado VARCHAR(15) NOT NULL,\n" +
-                "  Precio VARCHAR(25) NOT NULL,\n" +
-                  ");";
+        String sql = "CREATE TABLE IF NOT EXISTS Producto" +
+                "( ID IDENTITY PRIMARY KEY NOT NULL," +
+                "  Nombre VARCHAR(100) NOT NULL," +
+                "  Estado VARCHAR(15) NOT NULL," +
+                "  Precio VARCHAR(25) NOT NULL)";
         ExecuteQuery(sql);
-
     }
 
     public static void TablaUsuario() throws  SQLException{
-        String sql = "CREATE TABLE IF NOT EXISTS Usuario\n" +
-                "(\n" +
-                "  User IDENTITY PRIMARY KEY NOT NULL,\n" +
-                "  Password VARCHAR(100) NOT NULL,\n" +
-                "  Tipo VARCHAR(5) NOT NULL,\n" +
-                ");";
+        String sql = "CREATE TABLE IF NOT EXISTS Usuario(Usuario VARCHAR(50) Primary Key Not Null, Password VARCHAR(100) NOT NULL,  Tipo VARCHAR(5) NOT NULL)";
         ExecuteQuery(sql);
 
     }
 
     public static void  Admin() throws SQLException{
-        String sql = "INSERT INTO Usuario (User,Password,Tipo) " +
+        String sql = "INSERT INTO Usuario (Usuario,Password,Tipo) " +
                 "values ('admin','admin','admin') ";
         Connection con = null;
         try {
@@ -108,33 +100,25 @@ public class BootStrapServices {
     }
 
     public static void TablaVentas() throws  SQLException{
-        String sql = "CREATE TABLE IF NOT EXISTS Ventas\n" +
-                "(\n" +
-                "  ID IDENTITY PRIMARY KEY NOT NULL,\n" +
-                "  Fecha DATE NOT NULL,\n" +
-                "  Nombre VARCHAR(25) NOT NULL,\n" +
-                ");";
+        String sql = "CREATE TABLE IF NOT EXISTS Ventas" +
+                "  ( ID IDENTITY PRIMARY KEY NOT NULL," +
+                "  Fecha DATE NOT NULL," +
+                "  Nombre VARCHAR(25) NOT NULL)";
         ExecuteQuery(sql);
 
     }
 
     public static void TablaVentasProductos() throws  SQLException{
-        String sql = "CREATE TABLE IF NOT EXISTS VentaProductos\n" +
-                "(\n" +
-                " VentaID INTEGER NOT NULL,\n"+
-                " ProductoID INTEGER NOT NULL,\n"+
-                " Cantidad INTEGER NOT NULL, \n" +
-                "FOREIGN KEY (VentaID) REFERENCES Ventas(ID), \n" +
-                "FOREIGN KEY (ProductoID) REFERENCES Producto(ID), \n"+
-                "CONSTRAINT PK_ID PRIMARY KEY (VentaID,ProductoID) \n" +
-                ");";
+        String sql = "CREATE TABLE IF NOT EXISTS VentaProductos" +
+                " (VentaID INTEGER NOT NULL,"+
+                " ProductoID INTEGER NOT NULL,"+
+                " Cantidad INTEGER NOT NULL, " +
+                "FOREIGN KEY (VentaID) REFERENCES Ventas(ID)," +
+                "FOREIGN KEY (ProductoID) REFERENCES Producto(ID),"+
+                "CONSTRAINT PK_ID PRIMARY KEY (VentaID,ProductoID))";
         ExecuteQuery(sql);
 
     }
-
-
-
-
 
 }
 

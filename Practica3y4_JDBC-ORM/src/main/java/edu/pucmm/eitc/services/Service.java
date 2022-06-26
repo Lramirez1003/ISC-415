@@ -1,8 +1,6 @@
 package edu.pucmm.eitc.services;
 
 import edu.pucmm.eitc.encapsulaciones.*;
-import org.eclipse.jetty.websocket.common.scopes.DelegatedContainerScope;
-import org.jetbrains.annotations.NotNull;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -101,10 +99,10 @@ public class Service {
         List<Producto> productos= new ArrayList<Producto>();
         Connection con = null;
         try{
-            String query = "SELECT Producto.Nombre AS Nombre, Producto.Precio AS Precio,VentaProductos.Cantidad AS Cantidad\n" +
+            String sql = "SELECT Producto.Nombre AS Nombre, Producto.Precio AS Precio,VentaProductos.Cantidad AS Cantidad\n" +
                     "FROM VentaProductos INNER JOIN Producto ON Producto.ID = VentaProductos.ProductoID;";
             con = DataBaseServices.getInstancia().getConexion();
-            PreparedStatement ps = con.prepareStatement(query);
+            PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()){
@@ -126,17 +124,17 @@ public class Service {
         return (ArrayList<Producto>) productos;
     }
 
-    public Usuario authuser(String usuario,String nombre, String password){
+    public Usuario authuser(String usuario, String password){
 
-        return new Usuario(usuario,nombre,password);
+        return new Usuario(usuario,password);
     }
 
     public Producto registerProducto(Producto producto){
         int row;
         Connection con= null;
         try {
-            String sql = "INSERT INTO Producto(Nombre,Precio)" +
-                    "values(?,?)";
+            String sql = "INSERT INTO Producto(Nombre,Precio,Estado)" +
+                    "values(?,?,'Disponible')";
             con = DataBaseServices.getInstancia().getConexion();
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1,producto.getNombre());
@@ -220,6 +218,7 @@ public class Service {
             String sql = "SELECT * FROM Producto where ID= ?";
             con = DataBaseServices.getInstancia().getConexion();
             PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1,id);
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()){
@@ -276,7 +275,7 @@ public class Service {
         for (Producto producto:listaProductos){
             try {
                 String sql="INSERT INTO VentaProductos(VentaID,ProductoID,Cantidad)" +
-                        "values(?,?,?,?)";
+                        "values(?,?,?)";
                 con = DataBaseServices.getInstancia().getConexion();
                 PreparedStatement ps = con.prepareStatement(sql);
                 ps.setInt(1,row);
@@ -300,10 +299,9 @@ public class Service {
         return conf;
     }
     private void registerUsuario(Usuario user) throws SQLException {
-        String sql = "IF NOT EXISTS(select * from usuario where usuario='admin' and password ='admin')" +
-                "BEGIN" +
-                "INSERT INTO Usuario (Usuario,Password,Tipo) values ('"+user.getUsuario()+"','"+user.getPassword()+"','CLI')" +
-                "END";
+        String sql ="INSERT INTO Usuario(USUARIO,PASSWORD,TIPO) " +
+                "SELECT * FROM (select '"+user.getUsuario()+"' as us,'"+user.getPassword()+"' as pas, 'User' as ti) as val1 " +
+                "WHERE NOT EXISTS (select * from usuario where usuario='"+user.getUsuario()+"' limit 1)";
         BootStrapServices.ExecuteQuery(sql);
     }
 
@@ -313,14 +311,15 @@ public class Service {
         String tipo;
         Connection con = null;
         try {
-            String sql = "SELECT COUNT(*) AS Cantidad FROM Usuario WHERE User = '"+ user.getUsuario()+"'and Password = '" + user.getPassword()+"'";
+            String sql = "SELECT COUNT(*) AS Cantidad FROM Usuario WHERE User = '"+user.getUsuario()+"'and Password = '" +user.getPassword()+"'";
             con = DataBaseServices.getInstancia().getConexion();
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             rs.next();
             res = rs.getInt("cantidad");
             if (res > 0) {
-                ps = con.prepareStatement("SELECT Tipo FROM Usuario WHERE User = '" + user.getUsuario() + "'and Password = '" + user.getPassword() + "'");
+                String sql1 = "SELECT Tipo FROM Usuario WHERE User = '"+user.getUsuario()+"'and Password = '"+user.getPassword()+"'";
+                ps = con.prepareStatement(sql1);
                 ResultSet rs1 = ps.executeQuery();
                 rs1.next();
                 tipo = rs1.getString("tipo");
