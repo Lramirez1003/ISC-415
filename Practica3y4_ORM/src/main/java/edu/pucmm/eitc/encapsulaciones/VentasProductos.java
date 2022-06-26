@@ -1,20 +1,26 @@
 package edu.pucmm.eitc.encapsulaciones;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import jakarta.persistence.*;
 
-public class VentasProductos {
-
+@Entity
+public class VentasProductos implements Serializable {
+    @Id
+    @GeneratedValue
     long id;
+    @Temporal(TemporalType.DATE)
     Date fechaCompra;
     String nombreCliente;
+    @OneToMany(fetch = FetchType.EAGER)
     ArrayList<Producto>listaProductos;
 
-    public VentasProductos(String nombreCliente, ArrayList<Producto> productos) {
+    public VentasProductos(String nombreCliente) {
         this.nombreCliente = nombreCliente;
-        this.listaProductos = productos;
+        fechaCompra = new Date();
     }
     public VentasProductos(){
 

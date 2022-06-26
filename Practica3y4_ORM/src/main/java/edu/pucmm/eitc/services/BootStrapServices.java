@@ -20,22 +20,25 @@ public class BootStrapServices {
      *
      * @throws SQLException
      */
-    public static void startDb()  {
+    public static void startDb() {
         try {
-            server = Server.createTcpServer("-tcpPort", "9092", "-tcpAllowOthers", "-ifNotExists").start();
+            //Modo servidor H2.
+            Server.createTcpServer("-tcpPort",
+                    "9092",
+                    "-tcpAllowOthers",
+                    "-tcpDaemon",
+                    "-ifNotExists").start();
+            //Abriendo el cliente web. El valor 0 representa puerto aleatorio.
+            String status = Server.createWebServer("-trace", "-webPort", "0").start().getStatus();
+            //
+            System.out.println("Status Web: "+status);
         }catch (SQLException ex){
-            ex.printStackTrace();
+            System.out.println("Problema con la base de datos: "+ex.getMessage());
         }
     }
 
-    /**
-     *
-     * @throws SQLException
-     */
-    public static void stopDb() throws SQLException {
-        if(server!=null) {
-            server.stop();
-        }
+    public void init(){
+        startDb();
     }
 
 
@@ -43,82 +46,7 @@ public class BootStrapServices {
      * Metodo para recrear las tablas necesarios
      * @throws SQLException
      */
-    public static void  Tablas() throws SQLException{
-        TablaProducto();
-        TablaUsuario();
-        TablaVentas();
-        TablaVentasProductos();
-        Admin();
-    }
-    public static void  ExecuteQuery(String sql) throws SQLException{
-        Connection con = DataBaseServices.getInstancia().getConexion();
-        Statement statement = con.createStatement();
-        statement.execute(sql);
-        statement.close();
-        con.close();
-    }
 
-
-    public static void TablaProducto() throws  SQLException{
-        String sql = "CREATE TABLE IF NOT EXISTS Producto" +
-                "( ID IDENTITY PRIMARY KEY NOT NULL," +
-                "  Nombre VARCHAR(100) NOT NULL," +
-                "  Estado VARCHAR(15) NOT NULL," +
-                "  Precio VARCHAR(25) NOT NULL)";
-        ExecuteQuery(sql);
-    }
-
-    public static void TablaUsuario() throws  SQLException{
-        String sql = "CREATE TABLE IF NOT EXISTS Usuario(Usuario VARCHAR(50) Primary Key Not Null, Password VARCHAR(100) NOT NULL,  Tipo VARCHAR(5) NOT NULL)";
-        ExecuteQuery(sql);
-
-    }
-
-    public static void  Admin() throws SQLException{
-        String sql = "INSERT INTO Usuario (Usuario,Password,Tipo) " +
-                "values ('admin','admin','admin') ";
-        Connection con = null;
-        try {
-            con = DataBaseServices.getInstancia().getConexion();
-            PreparedStatement ps= con.prepareStatement(sql);
-            int row = ps.executeUpdate();
-
-        } catch (SQLException e) {
-            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
-
-            throw new RuntimeException(e);
-        } finally {
-            try {
-                con.close();
-            } catch (SQLException e) {
-                Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, e);
-
-                throw new RuntimeException(e);
-            }
-        }
-
-    }
-
-    public static void TablaVentas() throws  SQLException{
-        String sql = "CREATE TABLE IF NOT EXISTS Ventas" +
-                "  ( ID IDENTITY PRIMARY KEY NOT NULL," +
-                "  Fecha DATE NOT NULL," +
-                "  Nombre VARCHAR(25) NOT NULL)";
-        ExecuteQuery(sql);
-
-    }
-
-    public static void TablaVentasProductos() throws  SQLException{
-        String sql = "CREATE TABLE IF NOT EXISTS VentaProductos" +
-                " (VentaID INTEGER NOT NULL,"+
-                " ProductoID INTEGER NOT NULL,"+
-                " Cantidad INTEGER NOT NULL, " +
-                "FOREIGN KEY (VentaID) REFERENCES Ventas(ID)," +
-                "FOREIGN KEY (ProductoID) REFERENCES Producto(ID),"+
-                "CONSTRAINT PK_ID PRIMARY KEY (VentaID,ProductoID))";
-        ExecuteQuery(sql);
-
-    }
 
 }
 

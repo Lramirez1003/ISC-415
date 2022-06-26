@@ -1,22 +1,38 @@
 package edu.pucmm.eitc.encapsulaciones;
 
-public class Producto {
+import jakarta.persistence.*;
 
+import java.io.Serializable;
+import java.util.List;
+
+@Entity
+public class Producto implements Serializable {
+
+    @Id
+    @GeneratedValue
     int id;
     String nombre;
     int precio;
 
+    @Transient
     int Cantidad;
+    String Descripcion;
 
-    public Producto(String nombre, int precio) {
+    @Column(columnDefinition = "boolean default true")
+    boolean Estado;
+
+    @OneToMany(fetch = FetchType.EAGER)
+    List<Foto> Fotos;
+
+    public Producto(String nombre, int precio, String Descripcion) {
         this.nombre = nombre;
         this.precio = precio;
+        this.Descripcion = Descripcion;
+        Estado = true;
     }
 
     public Producto() {
-        id= 0;
-        nombre="";
-        precio=0;
+
     }
 
     public int getId() {
@@ -51,14 +67,27 @@ public class Producto {
         Cantidad = cantidad;
     }
 
-    public int total(){
-        return precio * Cantidad;
+    public String getDescripcion() {
+        return Descripcion;
     }
 
+    public void setDescripcion(String descripcion) {
+        Descripcion = descripcion;
+    }
 
-    public void act_prod(Producto producto){
-        this.nombre = producto.nombre;
-        this.precio = producto.precio;
+    public boolean isEstado() {
+        return Estado;
+    }
 
+    public void setEstado(boolean estado) {
+        Estado = estado;
+    }
+
+    public List<Foto> getFotos() {
+        return Fotos;
+    }
+
+    public void setFotos(List<Foto> fotos) {
+        Fotos = fotos;
     }
 }

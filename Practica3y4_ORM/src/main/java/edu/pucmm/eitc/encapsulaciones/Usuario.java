@@ -1,8 +1,12 @@
 package edu.pucmm.eitc.encapsulaciones;
 
+import java.io.Serializable;
 import java.security.PublicKey;
+import jakarta.persistence.*;
 
-public class Usuario {
+@Entity
+public class Usuario implements Serializable {
+    @Id
     String usuario;
     String password;
 
@@ -21,16 +25,10 @@ public class Usuario {
         return usuario;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+
 }
