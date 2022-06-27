@@ -15,7 +15,7 @@
             <form action="/comprar" method="post">
                 <td>$producto.nombre</td>
                 <td>$producto.precio</td>
-                <td>$producto.descripcion</td>
+                <td>$producto.desc</td>
                 <input type="hidden" value="$producto.id" name="id">
                 <td><input type="number" min="0" value="0" name="cantidad"></td>
                 <td><input type="submit" value="Agregar">

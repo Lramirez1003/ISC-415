@@ -3,8 +3,9 @@ package edu.pucmm.eitc.encapsulaciones;
 import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -16,7 +17,7 @@ public class VentasProductos implements Serializable {
     Date fechaCompra;
     String nombreCliente;
     @OneToMany(fetch = FetchType.EAGER)
-    ArrayList<Producto>listaProductos;
+    List<Venta> listaProductos;
 
     public VentasProductos(String nombreCliente) {
         this.nombreCliente = nombreCliente;
@@ -52,21 +53,14 @@ public class VentasProductos implements Serializable {
         this.nombreCliente = nombreCliente;
     }
 
-    public ArrayList<Producto> getListaProductos() {
+    public List<Venta> getListaProductos() {
         return listaProductos;
     }
 
-    public void setListaProductos(ArrayList<Producto> listaProductos) {
+    public void setListaProductos(List<Venta> listaProductos) {
         this.listaProductos = listaProductos;
     }
 
-    public int getTotal(){
-        int sumtot = 0;
-        for (Producto producto : listaProductos) {
-            sumtot += producto.getPrecio()*producto.getCantidad();
-        }
-        return sumtot;
-    }
 
 }
 

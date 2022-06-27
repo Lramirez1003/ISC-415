@@ -1,18 +1,14 @@
 package edu.pucmm.eitc.enrutamiento;
 
+import edu.pucmm.eitc.services.*;
 import edu.pucmm.eitc.util.BaseControlador;
-import edu.pucmm.eitc.services.Service;
 import io.javalin.Javalin;
 
 import edu.pucmm.eitc.encapsulaciones.*;
-import io.javalin.plugin.rendering.JavalinRenderer;
-import io.javalin.plugin.rendering.template.JavalinVelocity;
-import org.jasypt.util.password.StrongPasswordEncryptor;
 import org.jasypt.util.text.AES256TextEncryptor;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.IOException;
+import java.util.*;
 
 public class rutas extends BaseControlador {
 
@@ -20,18 +16,15 @@ public class rutas extends BaseControlador {
     public rutas(Javalin app) {
         super(app);
     }
-    private void registrandoPlantillas(){
-        JavalinRenderer.register(JavalinVelocity.INSTANCE, ".vm");
-    }
     @Override
     public void aplicarRutas() {
 
-        Service service = Service.getInstance();
+        Unkown();
 
         app.before(ctx -> {
             CarroCompra cart = ctx.sessionAttribute("carro");
             if(cart == null){
-                cart = new CarroCompra(service.getCart());
+                cart = new CarroCompra();
             }
             ctx.sessionAttribute("carro",cart);
 
@@ -40,10 +33,12 @@ public class rutas extends BaseControlador {
         app.get("/", ctx -> {
             CarroCompra carro = ctx.sessionAttribute("carro");
 
-            List<Producto> productos = service.getProductos();
+            List<Producto> productos = ProductoServices.getInstancia().EncontrarProd(0,10) ;
             Map<String, Object> modelo = new HashMap<>();
             modelo.put("productos",productos);
             modelo.put("cantidad",carro.getListaProductos().size());
+            List<String> page = getPages();
+            modelo.put("paginas",page);
             ctx.render("/publico/listaProd.vm", modelo);
         });
 
@@ -53,8 +48,7 @@ public class rutas extends BaseControlador {
             Producto temp = carro.getProductID(ctx.formParamAsClass("id",
                     Integer.class).get());
             if(temp == null){
-                temp = service.getProductoID(ctx.formParamAsClass("id",
-                        Integer.class).get());
+                temp = ProductoServices.getInstancia().find(ctx.formParamAsClass("id", Integer.class).get());
                 temp.setCantidad(ctx.formParamAsClass("cantidad",Integer.class).get() );
                 carro.addProducto(temp);
                 ctx.sessionAttribute("carro",carro);
@@ -81,12 +75,12 @@ public class rutas extends BaseControlador {
                     return;
             }
             CarroCompra carro = ctx.sessionAttribute("carro");
-            List<VentasProductos> ventas = service.getVentas();
+            List<VentasProductos> ventas = VentasProdServices.getInstancia().getVentasProd();
             Map<String,Object> modelo = new HashMap<>();
             modelo.put("ventas",ventas);
             modelo.put("cantidad",carro.getListaProductos().size());
 
-            ctx.render("publico/ventas.vm",modelo);
+            ctx.render("/publico/ventas.vm",modelo);
         });
 
         app.get("/productos",ctx -> {
@@ -97,7 +91,7 @@ public class rutas extends BaseControlador {
                  return;
             }
             CarroCompra carro = ctx.sessionAttribute("carro");
-            List<Producto> producto = service.getProductos();
+            List<Producto> producto = ProductoServices.getInstancia().EncontrarProd(0,0);
             Map<String,Object> modelo = new HashMap<>();
             modelo.put("productos",producto);
             modelo.put("cantidad",carro.getListaProductos().size());
@@ -110,19 +104,57 @@ public class rutas extends BaseControlador {
             modelo.put("accion","/registrar");
             CarroCompra carro = ctx.sessionAttribute("carro");
             modelo.put("cantidad",carro.getListaProductos().size());
-            ctx.render("publico/registrar.vm",modelo);
+            ctx.render("/publico/registrar.vm",modelo);
         });
 
         app.post("/registrar",ctx -> {
             String nombre= ctx.formParam("nombre");
             int precio = ctx.formParamAsClass("precio",Integer.class).get();
-            Producto tmp = new Producto(nombre,precio);
-            service.registerProducto(tmp);
+            String descripcion = ctx.formParam("desc");
+            List<Foto> images = new ArrayList<Foto>();
+            ctx.uploadedFiles("img").forEach(uploadedFile -> {
+                try {
+                    byte[]bytes = uploadedFile.getContent().readAllBytes();
+                    String encString = Base64.getEncoder().encodeToString(bytes);
+                    Foto foto = new Foto(uploadedFile.getFilename(), uploadedFile.getContentType(), encString);
+                    FotoServices.getInstancia().crear(foto);
+                    images.add(foto);
+                }catch (IOException ex){
+                    ex.printStackTrace();
+                }
+            });
+            Producto tmp = new Producto(nombre,precio,descripcion);
+            tmp.setFotos(images);
+            ProductoServices.getInstancia().crear(tmp);
             ctx.redirect("/productos");
+        });
+        app.get("/visualizar/{id}",ctx -> {
+            int id = ctx.pathParamAsClass("id",Integer.class).get();
+            Producto tmp = ProductoServices.getInstancia().find(id);
+            List<Comentario> comment = ComentarioServices.getInstancia().findComentarios(id);
+            Map<String,Object> modelo = new HashMap<>();
+            String usuario = ctx.cookie("usuario");
+            modelo.put("temp",tmp);
+            modelo.put("comentarios", comment);
+            modelo.put("user",usuario);
+            ctx.render("/publico/vis.vm",modelo);
+        });
+        app.post("/addComentario/{id}", ctx->{
+            String comentario = ctx.formParam("comentarios");
+            int id = ctx.pathParamAsClass("id", Integer.class).get();
+            Comentario tmp = new Comentario(comentario,id);
+            ComentarioServices.getInstancia().crear(tmp);
+            ctx.redirect("/visualizar/"+id);
+        });
+
+        app.get("/delComentario/{id}/{comentarios}", ctx ->{
+            int id = ctx.pathParamAsClass("id", Integer.class).get();
+            ComentarioServices.getInstancia().eliminar(ctx.pathParamAsClass("comentarios",Integer.class).get());
+           ctx.redirect("/visualizar/"+id);
         });
 
         app.get("/edit/{id}",ctx -> {
-            Producto tmp = service.getProductoID(ctx.pathParamAsClass("id",Integer.class).get());
+            Producto tmp = ProductoServices.getInstancia().find(ctx.pathParamAsClass("id",Integer.class).get());
             Map<String,Object> modelo = new HashMap<>();
             modelo.put("producto",tmp);
             modelo.put("accion","/edit/"+ctx.pathParamAsClass("id",Integer.class).get());
@@ -134,12 +166,24 @@ public class rutas extends BaseControlador {
         app.post("/edit/{id}",ctx -> {
             String nombre= ctx.formParam("nombre");
             int precio = ctx.formParamAsClass("precio",Integer.class).get();
-
-            Producto tmp = new Producto(nombre,precio);
+            String desc= ctx.formParam("desc") ;
+            Producto tmp = new Producto(nombre,precio,desc);
             tmp.setId(ctx.pathParamAsClass("id",Integer.class).get());
-            service.actualizarProducto(tmp);
+            ProductoServices.getInstancia().editar(tmp);
             ctx.redirect("/productos");
 
+        });
+
+        app.get("/comprar/{id}", ctx -> {
+            int pos = ctx.pathParamAsClass("id", Integer.class).get() * 10;
+            CarroCompra carro = ctx.sessionAttribute("carro");
+            List<Producto> productos = ProductoServices.getInstancia().EncontrarProd(pos,pos+10);
+            Map<String, Object> modelo = new HashMap<>();
+            modelo.put("productos",productos);
+            modelo.put("cantidad",carro.getListaProductos().size());
+            List<String> paginas = getPages();
+            modelo.put("paginas",paginas);
+            ctx.render("/publico/listaProd.vm", modelo);
         });
 
         app.get("/auth/{param}", ctx -> {
@@ -159,7 +203,6 @@ public class rutas extends BaseControlador {
                 ctx.redirect("/auth/"+tmp);
             }
             Usuario temp= new Usuario(user,pass);
-            service.authUser(temp);
             AES256TextEncryptor textEncryptor = new AES256TextEncryptor();
             textEncryptor.setPassword("mipipi");
             pass = textEncryptor.encrypt(pass);
@@ -179,7 +222,7 @@ public class rutas extends BaseControlador {
         app.get("/Carro", ctx -> {
             CarroCompra carro = ctx.sessionAttribute("carro");
             if(carro == null){
-                carro = new CarroCompra(service.getCart());
+                carro = new CarroCompra();
             }
             ctx.sessionAttribute("carro",carro);
             Map<String, Object> modelo = new HashMap<>();
@@ -204,8 +247,9 @@ public class rutas extends BaseControlador {
                 ctx.redirect("/Carro");
             }
             String nombre = ctx.formParam("nombre");
-            VentasProductos venta = new VentasProductos(nombre,carro.listaProductos);
-            service.addVentas(venta);
+            VentasProductos venta = new VentasProductos(nombre);
+            List<Venta>lista = VentaServices.getInstancia().VentaRealizada(carro.listaProductos,venta.getId());
+            venta.setListaProductos(lista);
             carro.deleteProductos();
             ctx.sessionAttribute("carro",carro);
             ctx.redirect("/comprar");
@@ -214,7 +258,7 @@ public class rutas extends BaseControlador {
 
 
         app.get("/remove/{id}",ctx -> {
-            service.deleteProducto(ctx.pathParamAsClass("id",Integer.class).get());
+            ProductoServices.getInstancia().eliminar(ctx.pathParamAsClass("id",Integer.class).get());
             ctx.redirect("/productos");
 
         });
@@ -233,9 +277,30 @@ public class rutas extends BaseControlador {
             ctx.redirect("/");
         });
 
-
-
-
+    }
+    public void Unkown() {
+        String nombre;
+        int precio;
+        String descripcion;
+        List<Foto> Fotos = new ArrayList<Foto>();
+        for(int i = 0 ; i < 19; i++){
+            nombre = "producto "+ i;
+            precio = 10 * i;
+            descripcion = "Este es el producto "+i;
+            Producto temp = new Producto(nombre,precio,descripcion);
+            temp.setFotos(Fotos);
+            ProductoServices.getInstancia().crear(temp);
+        }
 
     }
+    static List<String> getPages(){
+        int page = ProductoServices.getInstancia().pagina();
+        List<String> lista = new ArrayList<String>();
+        for(int i = 0; i <= page; i++){
+            String aux = "<a class=\"page-link\" href=\"/comprar/"+i+"\">"+(i+1)+"</a>";
+            lista.add(aux);
+        }
+        return lista;
+    }
+
 }

@@ -13,10 +13,10 @@ public class Producto implements Serializable {
     int id;
     String nombre;
     int precio;
-
+    String desc;
     @Transient
     int Cantidad;
-    String Descripcion;
+
 
     @Column(columnDefinition = "boolean default true")
     boolean Estado;
@@ -24,10 +24,10 @@ public class Producto implements Serializable {
     @OneToMany(fetch = FetchType.EAGER)
     List<Foto> Fotos;
 
-    public Producto(String nombre, int precio, String Descripcion) {
+    public Producto(String nombre, int precio, String desc) {
         this.nombre = nombre;
         this.precio = precio;
-        this.Descripcion = Descripcion;
+        this.desc = desc;
         Estado = true;
     }
 
@@ -67,12 +67,12 @@ public class Producto implements Serializable {
         Cantidad = cantidad;
     }
 
-    public String getDescripcion() {
-        return Descripcion;
+    public String getdesc() {
+        return desc;
     }
 
     public void setDescripcion(String descripcion) {
-        Descripcion = descripcion;
+        descripcion = descripcion;
     }
 
     public boolean isEstado() {
@@ -83,11 +83,16 @@ public class Producto implements Serializable {
         Estado = estado;
     }
 
+
     public List<Foto> getFotos() {
         return Fotos;
     }
 
     public void setFotos(List<Foto> fotos) {
         Fotos = fotos;
+    }
+
+    public int total(){
+        return precio * Cantidad;
     }
 }

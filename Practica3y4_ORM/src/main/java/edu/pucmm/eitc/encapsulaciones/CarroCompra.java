@@ -7,7 +7,7 @@ public class CarroCompra {
     long id;
     public ArrayList<Producto> listaProductos;
 
-    public CarroCompra(long id) {
+    public CarroCompra() {
         this.id = id;
         this.listaProductos = new ArrayList<Producto>();
     }
