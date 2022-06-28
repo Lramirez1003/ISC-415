@@ -19,8 +19,6 @@ public class rutas extends BaseControlador {
     @Override
     public void aplicarRutas() {
 
-        Unkown();
-
         app.before(ctx -> {
             CarroCompra cart = ctx.sessionAttribute("carro");
             if(cart == null){
@@ -218,7 +216,7 @@ public class rutas extends BaseControlador {
 
         });
 
-        /*Carga el carro pasando la lista de productos que se tiene dentro del carro*/
+
         app.get("/Carro", ctx -> {
             CarroCompra carro = ctx.sessionAttribute("carro");
             if(carro == null){
@@ -278,21 +276,7 @@ public class rutas extends BaseControlador {
         });
 
     }
-    public void Unkown() {
-        String nombre;
-        int precio;
-        String descripcion;
-        List<Foto> Fotos = new ArrayList<Foto>();
-        for(int i = 0 ; i < 19; i++){
-            nombre = "producto "+ i;
-            precio = 10 * i;
-            descripcion = "Este es el producto "+i;
-            Producto temp = new Producto(nombre,precio,descripcion);
-            temp.setFotos(Fotos);
-            ProductoServices.getInstancia().crear(temp);
-        }
 
-    }
     static List<String> getPages(){
         int page = ProductoServices.getInstancia().pagina();
         List<String> lista = new ArrayList<String>();

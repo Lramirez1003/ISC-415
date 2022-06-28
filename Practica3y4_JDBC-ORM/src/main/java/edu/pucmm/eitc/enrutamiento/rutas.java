@@ -175,7 +175,7 @@ public class rutas extends BaseControlador {
 
         });
 
-        /*Carga el carro pasando la lista de productos que se tiene dentro del carro*/
+
         app.get("/Carro", ctx -> {
             CarroCompra carro = ctx.sessionAttribute("carro");
             if(carro == null){
@@ -187,7 +187,7 @@ public class rutas extends BaseControlador {
             modelo.put("cantidad",carro.getListaProductos().size());
             ctx.render("/publico/carrito.vm",modelo);
         });
-        /*Elimina un producto del carro a partir de su id*/
+
         app.get("/delete/{id}", ctx -> {
             int id = ctx.pathParamAsClass("id", Integer.class).get();
             CarroCompra carro = ctx.sessionAttribute("carro");
