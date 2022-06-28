@@ -19,6 +19,8 @@ public class rutas extends BaseControlador {
     @Override
     public void aplicarRutas() {
 
+        Paginacion();
+
         app.before(ctx -> {
             CarroCompra cart = ctx.sessionAttribute("carro");
             if(cart == null){
@@ -274,6 +276,23 @@ public class rutas extends BaseControlador {
             }
             ctx.redirect("/");
         });
+
+    }
+
+    public void Paginacion() {
+        String nombre;
+        int precio;
+        String descripcion;
+        List<Foto> Fotos = new ArrayList<Foto>();
+        for(int i = 0 ; i < 19; i++){
+            nombre = "Producto #"+ i;
+            precio = 10 * i;
+            descripcion = "Este es el producto "+i;
+            Producto pag = new Producto(nombre,precio,descripcion);
+            pag.setFotos(Fotos);
+            ProductoServices.getInstancia().crear(pag);
+        }
+
 
     }
 
