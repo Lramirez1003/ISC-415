@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group 'edu.pucmm.eitc.Main'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName='edu.pucmm.eitc.Main'
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation 'io.javalin:javalin:4.6.0'
+    implementation "org.slf4j:slf4j-simple:1.7.36"
+    implementation 'org.thymeleaf:thymeleaf:3.0.15.RELEASE'
+    implementation 'org.apache.velocity:velocity-engine-core:2.3'
+    implementation 'com.h2database:h2:2.1.214'
+    implementation 'org.jasypt:jasypt:1.9.3'
+    implementation 'org.hibernate.orm:hibernate-core:6.1.0.Final'
+    implementation 'org.postgresql:postgresql:42.3.6'
+
+}
+
+
+shadowJar{
+    baseName = 'app'
+    classifier = ''
+    archiveVersion = ''
+}
+
+/**
+ * tarea necesaria para heroku si optamos por la tarea de Shadowjar
+ * en el archivo Procfile debe estar el siguiente comando:
+ * web: java -jar build/libs/app.jar
+ */
+task stage {
+    dependsOn shadowJar
+}
