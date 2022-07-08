@@ -16,6 +16,16 @@ public class BootStrapServices {
 
     private static Server server;
 
+    private static BootStrapServices instancia;
+
+    private BootStrapServices(){};
+    public static BootStrapServices getInstancia(){
+        if(instancia == null){
+            instancia=new BootStrapServices();
+        }
+        return instancia;
+    }
+
     /**
      *
      * @throws SQLException
