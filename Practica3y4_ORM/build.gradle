@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
 group 'edu.pucmm.eitc.Main'
@@ -23,16 +24,22 @@ dependencies {
     implementation 'com.h2database:h2:2.1.214'
     implementation 'org.jasypt:jasypt:1.9.3'
     implementation 'org.hibernate.orm:hibernate-core:6.1.0.Final'
-
-
-
-
-
-
-
+    implementation 'org.postgresql:postgresql:42.3.6'
 
 }
 
-test {
-    useJUnitPlatform()
+
+shadowJar{
+    baseName = 'app'
+    classifier = ''
+    archiveVersion = ''
+}
+
+/**
+ * tarea necesaria para heroku si optamos por la tarea de Shadowjar
+ * en el archivo Procfile debe estar el siguiente comando:
+ * web: java -jar build/libs/app.jar
+ */
+task stage {
+    dependsOn shadowJar
 }

@@ -161,7 +161,7 @@ public class rutas extends BaseControlador {
             Usuario temp= new Usuario(user,pass);
             service.authUser(temp);
             AES256TextEncryptor textEncryptor = new AES256TextEncryptor();
-            textEncryptor.setPassword("mipipi");
+            textEncryptor.setPassword("jesus");
             pass = textEncryptor.encrypt(pass);
             if (rec !=null) {
                 ctx.cookie("usuario", user,(3600*24*7));
@@ -197,7 +197,7 @@ public class rutas extends BaseControlador {
             ctx.redirect("/Carro");
         });
 
-        /*Procesa la compra*/
+
         app.post("/procesar",ctx -> {
             CarroCompra carro = ctx.sessionAttribute("carro");
             if(carro.getListaProductos().size() < 1){

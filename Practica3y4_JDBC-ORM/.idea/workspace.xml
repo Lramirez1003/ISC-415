@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5019293c-471a-4f78-b2b5-5f9348d84b88" name="Changes" comment="Arreglo sobre base de datos">
+    <list default="true" id="5019293c-471a-4f78-b2b5-5f9348d84b88" name="Changes" comment="Arreglos minimos">
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2_CarrodeCompras/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/publico/header.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/publico/header.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/enrutamiento/rutas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/pucmm/eitc/enrutamiento/rutas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +172,8 @@
       <workItem from="1656273054381" duration="96000" />
       <workItem from="1656274194504" duration="977000" />
       <workItem from="1656275456346" duration="1111000" />
+      <workItem from="1656442184065" duration="476000" />
+      <workItem from="1656526274920" duration="1801000" />
     </task>
     <task id="LOCAL-00001" summary="Parche">
       <created>1654867903932</created>
@@ -319,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656265297040</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Arreglos minimos">
+      <created>1656442259747</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1656442259747</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,11 +346,11 @@
     <MESSAGE value="Archivo de settins de gradle" />
     <MESSAGE value="Commit de servicio y arreglos menores" />
     <MESSAGE value="Vistas y compañia y archivo de ruta" />
-    <MESSAGE value="Arreglos minimos" />
     <MESSAGE value="Copiando practica 2 para su seguimiento en esta." />
     <MESSAGE value="Agregando dependencia de H2. Creando servicios para la conexion a la base de datos." />
     <MESSAGE value="Cambiando rutas locales a rutas relacionadas con la base de datos" />
     <MESSAGE value="Arreglo sobre base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arreglo sobre base de datos" />
+    <MESSAGE value="Arreglos minimos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglos minimos" />
   </component>
 </project>
