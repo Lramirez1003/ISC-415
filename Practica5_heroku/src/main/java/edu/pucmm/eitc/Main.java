@@ -23,9 +23,9 @@ public class Main {
         }
 
         //Iniciando la base de datos.
-        if(modoConexion.isEmpty()) {
+        /*if(modoConexion.isEmpty()) {
             BootStrapServices.getInstancia().init();
-        }
+        }*/
 
 
         //BootStrapServices.startDb();

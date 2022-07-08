@@ -23,14 +23,9 @@ public class DataBaseServices<T> {
      */
     public  DataBaseServices(Class<T> claseEntidad){
         if(emf == null) {
-            if(Main.getModoConexion().equalsIgnoreCase("Heroku")){
-                emf = getConfiguracionBaseDatosHeroku();
-            }else{
-                emf = Persistence.createEntityManagerFactory("MiUnidadPersistencia");
-            }
+            emf = Persistence.createEntityManagerFactory("MiUnidadPersistencia");
+            this.claseEntidad = claseEntidad;
         }
-        this.claseEntidad = claseEntidad;
-
     }
     public EntityManager getEntityManager(){
         return emf.createEntityManager();
