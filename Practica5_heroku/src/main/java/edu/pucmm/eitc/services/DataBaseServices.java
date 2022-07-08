@@ -1,14 +1,14 @@
 package edu.pucmm.eitc.services;
 
+import edu.pucmm.eitc.Main;
+import edu.pucmm.eitc.encapsulaciones.VentasProductos;
 import jakarta.persistence.*;
 import jakarta.persistence.criteria.CriteriaQuery;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.Map;
+import java.util.StringTokenizer;
 
 /**
  * Clase con patrón Singleton
@@ -22,14 +22,42 @@ public class DataBaseServices<T> {
      *Implementando el patron Singleton
      */
     public  DataBaseServices(Class<T> claseEntidad){
-        if (emf == null){
-            emf = Persistence.createEntityManagerFactory("MiUnidadPersistencia");
-            this.claseEntidad = claseEntidad;
+        if(emf == null) {
+            if(Main.getModoConexion().equalsIgnoreCase("Heroku")){
+                emf = getConfiguracionBaseDatosHeroku();
+            }else{
+                emf = Persistence.createEntityManagerFactory("MiUnidadPersistencia");
+            }
         }
+        this.claseEntidad = claseEntidad;
+
     }
     public EntityManager getEntityManager(){
         return emf.createEntityManager();
     }
+
+    private EntityManagerFactory getConfiguracionBaseDatosHeroku(){
+        //Leyendo la información de la variable de ambiente de Heroku
+        String databaseUrl = System.getenv("DATABASE_URL");
+        StringTokenizer st = new StringTokenizer(databaseUrl, ":@/");
+        //Separando las información del conexión.
+        String dbVendor = st.nextToken();
+        String userName = st.nextToken();
+        String password = st.nextToken();
+        String host = st.nextToken();
+        String port = st.nextToken();
+        String databaseName = st.nextToken();
+        //creando la jbdc String
+        String jdbcUrl = String.format("jdbc:postgresql://%s:%s/%s?sslmode=require", host, port, databaseName);
+        //pasando las propiedades.
+        Map<String, String> properties = new HashMap<>();
+        properties.put("jakarta.persistence.jdbc.url", jdbcUrl );
+        properties.put("jakarta.persistence.jdbc.user", userName );
+        properties.put("jakarta.persistence.jdbc.password", password );
+        //
+        return Persistence.createEntityManagerFactory("Heroku", properties);
+    }
+
 
     /**
      * Tomado de GestionDB.java creador vacax
@@ -48,6 +76,20 @@ public class DataBaseServices<T> {
             em.close();
         }
         return entidad;
+    }
+    public T crearVenta(VentasProductos entidad) throws IllegalArgumentException, EntityExistsException, PersistenceException{
+        EntityManager em = getEntityManager();
+
+        try {
+
+            em.getTransaction().begin();
+            em.persist(entidad);
+            em.getTransaction().commit();
+
+        }finally {
+            em.close();
+        }
+        return (T) entidad;
     }
 
     public T editar(T entidad) throws PersistenceException{

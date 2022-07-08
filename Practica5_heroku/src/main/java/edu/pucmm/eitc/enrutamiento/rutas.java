@@ -131,7 +131,7 @@ public class rutas extends BaseControlador {
         app.get("/visualizar/{id}",ctx -> {
             int id = ctx.pathParamAsClass("id",Integer.class).get();
             Producto tmp = ProductoServices.getInstancia().find(id);
-            List<Comentario> comment = ComentarioServices.getInstancia().findComentarios(id);
+            List<Comentario> comment = ComentarioServices.getInstancia().findComentarios(tmp.getId());
             Map<String,Object> modelo = new HashMap<>();
             String usuario = ctx.cookie("usuario");
             modelo.put("temp",tmp);
@@ -149,7 +149,8 @@ public class rutas extends BaseControlador {
 
         app.get("/delComentario/{id}/{comentarios}", ctx ->{
             int id = ctx.pathParamAsClass("id", Integer.class).get();
-            ComentarioServices.getInstancia().eliminar(ctx.pathParamAsClass("comentarios",Integer.class).get());
+            int com = ctx.pathParamAsClass("comentarios",Integer.class).get();
+            ComentarioServices.getInstancia().deleteComentario(com);
            ctx.redirect("/visualizar/"+id);
         });
 
@@ -247,9 +248,10 @@ public class rutas extends BaseControlador {
                 ctx.redirect("/Carro");
             }
             String nombre = ctx.formParam("nombre");
-            VentasProductos venta = new VentasProductos(nombre);
-            List<Venta>lista = VentaServices.getInstancia().VentaRealizada(carro.listaProductos,venta.getId());
-            venta.setListaProductos(lista);
+            VentasProductos ventap = new VentasProductos(nombre);
+            List<Venta> lista = VentaServices.getInstancia().VentaRealizada(carro.listaProductos,ventap.getId());
+            ventap.setListaProductos(lista);
+            VentaServices.getInstancia().crearVenta(ventap);
             carro.deleteProductos();
             ctx.sessionAttribute("carro",carro);
             ctx.redirect("/comprar");

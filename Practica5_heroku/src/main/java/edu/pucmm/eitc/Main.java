@@ -13,10 +13,12 @@ public class Main {
         JavalinRenderer.register(JavalinVelocity.INSTANCE, ".vm");
     }
 
+    private static String modoConexion="";
+
     public static void main(String[] args){
 
 
-        BootStrapServices.startDb();
+        //BootStrapServices.startDb();
         Javalin app = Javalin.create(config ->{
             config.addStaticFiles(staticFileConfig -> {
                 staticFileConfig.hostedPath = "/";
@@ -41,5 +43,9 @@ public class Main {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
         }
         return 7000; //Retorna el puerto por defecto en caso de no estar en Heroku.
+    }
+
+    public static String getModoConexion() {
+        return modoConexion;
     }
 }
