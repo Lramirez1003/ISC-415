@@ -28,7 +28,7 @@ public class Main {
         }*/
 
 
-        //BootStrapServices.startDb();
+        BootStrapServices.startDb();
         Javalin app = Javalin.create(config ->{
             config.addStaticFiles(staticFileConfig -> {
                 staticFileConfig.hostedPath = "/";
