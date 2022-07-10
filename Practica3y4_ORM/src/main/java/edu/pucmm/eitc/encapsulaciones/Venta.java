@@ -63,4 +63,6 @@ public class Venta implements Serializable {
     public void setNombre(String nombre) {
         Nombre = nombre;
     }
+
+    public int total(){return Cantidad * Precio;}
 }

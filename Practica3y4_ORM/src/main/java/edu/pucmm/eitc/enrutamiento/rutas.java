@@ -149,7 +149,7 @@ public class rutas extends BaseControlador {
 
         app.get("/delComentario/{id}/{comentarios}", ctx ->{
             int id = ctx.pathParamAsClass("id", Integer.class).get();
-            ComentarioServices.getInstancia().eliminar(ctx.pathParamAsClass("comentarios",Integer.class).get());
+            ComentarioServices.getInstancia().deleteComentario(ctx.pathParamAsClass("comentarios",Integer.class).get());
            ctx.redirect("/visualizar/"+id);
         });
 
@@ -250,6 +250,7 @@ public class rutas extends BaseControlador {
             VentasProductos venta = new VentasProductos(nombre);
             List<Venta>lista = VentaServices.getInstancia().VentaRealizada(carro.listaProductos,venta.getId());
             venta.setListaProductos(lista);
+            VentaServices.getInstancia().crearVenta(venta);
             carro.deleteProductos();
             ctx.sessionAttribute("carro",carro);
             ctx.redirect("/comprar");

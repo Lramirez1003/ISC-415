@@ -1,5 +1,6 @@
 package edu.pucmm.eitc.services;
 
+import edu.pucmm.eitc.encapsulaciones.VentasProductos;
 import jakarta.persistence.*;
 import jakarta.persistence.criteria.CriteriaQuery;
 
@@ -48,6 +49,21 @@ public class DataBaseServices<T> {
             em.close();
         }
         return entidad;
+    }
+
+    public T crearVenta(VentasProductos entidad) throws IllegalArgumentException, EntityExistsException, PersistenceException{
+        EntityManager em = getEntityManager();
+
+        try {
+
+            em.getTransaction().begin();
+            em.persist(entidad);
+            em.getTransaction().commit();
+
+        }finally {
+            em.close();
+        }
+        return (T) entidad;
     }
 
     public T editar(T entidad) throws PersistenceException{

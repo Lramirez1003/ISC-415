@@ -61,6 +61,13 @@ public class VentasProductos implements Serializable {
         this.listaProductos = listaProductos;
     }
 
+    public int getTotal(){
+        int sumtot = 0;
+        for (Venta producto : listaProductos) {
+            sumtot += producto.getPrecio()*producto.getCantidad();
+        }
+        return sumtot;
+    }
 
 }
 

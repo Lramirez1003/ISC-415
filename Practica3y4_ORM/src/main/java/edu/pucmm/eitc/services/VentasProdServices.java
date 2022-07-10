@@ -22,7 +22,7 @@ public class VentasProdServices  extends DataBaseServices<VentasProductos> {
 
     public List<VentasProductos> getVentasProd() {
         EntityManager em = getEntityManager();
-        Query sql= em.createNativeQuery("select * from VentasProductos",VentasProductos.class);
+        Query sql= em.createNativeQuery("select * from VENTASPRODUCTOS",VentasProductos.class);
         List<VentasProductos>lista = sql.getResultList();
         return lista;
     }
