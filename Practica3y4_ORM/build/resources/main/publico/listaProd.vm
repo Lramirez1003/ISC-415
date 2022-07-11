@@ -17,7 +17,7 @@
                 <td>$producto.precio</td>
                 <td>$producto.desc</td>
                 <input type="hidden" value="$producto.id" name="id">
-                <td><input type="number" min="0" value="0" name="cantidad"></td>
+                <td><input type="number" min="1" value="1" name="cantidad"></td>
                 <td><input type="submit" value="Agregar">
                 <a href="/visualizar/$producto.getId()" class="btn btn-primary">Visualizar</a></td>
             </form>

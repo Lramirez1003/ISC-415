@@ -15,7 +15,7 @@
                 <td>$producto.nombre</td>
                 <td>$producto.precio</td>
                 <input type="hidden" value="$producto.id" name="id">
-                <td><input type="number" min="0" value="0" name="cantidad"></td>
+                <td><input type="number" min="1" value="1" name="cantidad"></td>
                 <td><input type="submit" value="Agregar"></td>
             </form>
         </tr>
